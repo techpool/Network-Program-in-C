@@ -51,7 +51,7 @@ int main()
 		}
 
 		// We take the character and we scan for the character in our array for a match
-		for (i = 0; i < 25; ++i)
+		for (i = 0; i < 26; ++i)
 		{
 
 			// In case we find a match we we break out of the loop
@@ -77,4 +77,6 @@ int main()
 			fprintf(fd, "%c", destination[val]);
 		}
 	}
+	fclose(fs);
+	fclose(fd);
 }

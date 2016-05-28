@@ -47,7 +47,7 @@ int main(){
 
 		// This for loop scans through the destination array for a match from
 		// the character that was retrieved from the fgetc function
-		for (i = 0; i < 25; ++i)
+		for (i = 0; i < 26; ++i)
 		{
 			// If a match is found then the position of the character is stored in
 			// the val variable
@@ -74,4 +74,6 @@ int main(){
 			fprintf(fd, "%c", source[val]);
 		}
 	}
+	fclose(fs);
+	fclose(fd);
 }
