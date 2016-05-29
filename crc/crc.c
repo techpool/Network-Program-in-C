@@ -14,11 +14,11 @@ int main(){
 	printf("Enter the Key: \n");
 	gets(key);
 
-	// Finding the length of the key
-	keylen = strlen(key);
-
 	// Finding the length of the messege length
 	msglen = strlen(data);
+
+	// Finding the length of the key
+	keylen = strlen(key);
 
 	// Copying the key in a temporary variable
 	strcpy(tempkey, key);
@@ -87,7 +87,16 @@ int main(){
 				key[j] = tempkey[j];
 			}
 		}
-
+		// 	keylen = 3
+		// 	keylen - 1 = 2
+		// 	j =		0 1 2 3
+		// --------------------
+		// temp =	1 0 1 1
+		// key =	1 1 0
+		// --------------------
+		// rem =	0 1 1 1
+		// -------------------- 
+		// rem[pos]   0 1 2
 		// Here we perform the subtraction operation during the
 		// division which is nothing but a XOR operation
 		for (j = keylen - 1; j > 0; --j)
